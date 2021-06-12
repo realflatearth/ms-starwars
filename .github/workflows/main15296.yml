@@ -49,8 +49,8 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v1.6
         env:
-          GITHUB_TOKEN: ${{ secrets.starwars2 }}
-          SONAR_TOKEN: ${{ secrets.starwars }}
+          GITHUB_TOKEN: ${{ secrets.STARWARS2 }}
+          SONAR_TOKEN: ${{ secrets.STARWARS }}
         with:
           args: >
             -Dsonar.organization=realflatearth
