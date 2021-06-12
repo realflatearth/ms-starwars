@@ -45,3 +45,14 @@ jobs:
         with:
           name: Depcheck report
           path: ${{github.workspace}}/reports
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v1.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.starwars2 }}
+          SONAR_TOKEN: ${{ secrets.starwars }}
+        with:
+          args: >
+            -Dsonar.organization=realflatearth
+            -Dsonar.projectKey=realflatearth_ms-starwars
+          projectBaseDir: ./
